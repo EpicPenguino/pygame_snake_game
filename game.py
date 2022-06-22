@@ -120,7 +120,7 @@ class SnakeGame:
         # collides with apple
         for i in range(self.player.length):
             if self.game.collision(self.apple.x,self.apple.y,self.player.x[i],self.player.y[i],1):
-                self.apple.x,self.apple.y = (randint(30,180)//10)*10,(randint(30,180)//10)*10
+                self.apple.x,self.apple.y = (randint(50,940)//10)*10,(randint(50,940)//10)*10
                 self.player.length += 1
                 self.player.score += 1
         # collides with itself
@@ -154,7 +154,10 @@ class SnakeGame:
                 self._running = False
             self.loop()
             self.render()
-            time.sleep(150.0/1000.0)
+            if keys[K_q]:
+                time.sleep(50.0/1000.0)
+            else:
+                time.sleep(150.0/1000.0)
         self.quit()
 
 if __name__ == "__main__":
