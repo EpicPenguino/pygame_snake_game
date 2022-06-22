@@ -8,6 +8,7 @@
 
 ## Controls
 - Arrow keys to control direction of snake
+- Hold q to speed up the game
 - Press escape to quit the window
 
 ## User Interface
